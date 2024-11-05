@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumnos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    
+</head>
+<body class="max-w-[80%] mx-auto">
+    <nav class=" flex  justify-between items-center w-full  p-8">
+        <div class="h-7 overflow-hidden " >
+         <img class="w-full h-full object-cover"  src="https://class.utp.edu.pe/static/media/new-logo.c86d23e3.svg" alt="">
+     
+        </div>
+    
+       <div class="flex gap-3 items-center justify-center">
+        <div class="border-r-[1px] border-black px-3">
+            <!-- svg de alerta -->
+            <svg data-testid="cc-icon__svg" class="cc-icon" width="24" height="24" viewBox="0 0 1024 1024">
+                <path d="M922 691s-111-81-111-350c0-166-133-298-299-298S213 175 213 341c0 269-106 350-111 350-17 9-21 30-17 47 9 17 26 30 43 30h768c17 0 34-13 38-30s0-38-12-47zm-704-8c38-64 81-171 81-342 0-119 94-213 213-213s213 94 213 213c0 171 43 278 81 342H218zm388 175c-21-13-47-5-60 17-4 8-17 17-25 21-13 4-22 0-35-4-8-5-12-9-17-17-12-22-38-26-59-17-22 12-26 38-17 59 12 22 25 34 46 47s43 17 64 17c13 0 22 0 35-4 34-8 59-30 76-60 22-21 13-47-8-59z"/></svg>
+        </div>
+        
+        <div class="flex gap-5">
+            <div class="flex flex-col">
+               <h2 class="text-base"> Hola ,<span class="font-medium"> Henrry Williams </span> </h2>
+                <span class="text-sm text-end">Docente</span>
+            </div>
+            <div class="flex items-center gap-x-2">
+                <!-- img user -->
+                 <img src="https://class.utp.edu.pe/static/media/student.42525dea.svg" width="40" alt="imagen del usuario">
+                 <!-- boton bajo -->
+                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 16L6 10H18L12 16Z" fill="currentColor"/>
+                  </svg>
+                  
+             </div>
+        </div>
+       
+       </div>
+    </nav>
+    <!-- PRINCIPAL -->
+     
+    <main  class="bg-[#eff6ff] p-4 flex flex-col gap-5 ">
+         <!-- Barra  -->
+         <div class="flex gap-5">
+            <div class="inline-flex items-center gap-1 border-r-[1px] border-black pr-3 ">
+                <svg data-testid="cc-icon__svg" class="cc-icon fill-[#0661fc]" width="16" height="16" viewBox="0 0 1024 1024"><path d="M811 469H316l226-226c17-17 17-42 0-60s-43-17-60 0L183 482c-4 4-8 9-8 13-4 4-4 13-4 17s0 13 4 17 4 9 8 13l299 299c9 8 21 12 30 12s21-4 30-12c17-18 17-43 0-60L316 555h495c25 0 42-17 42-43s-17-43-42-43z"/></svg>
+                 <a class="text-xs text-[#0661fc]"  href=""> volver a cursos</a>
+            </div>
+           <p class="font-medium">Herramientas para la Comunicacion Efectiva- Sección 40703
+        </p>
+        </div>
+        
+        <div class="border-b-[1px] border-[#b0c0ca]  font-medium text-sm">
+        <ul class="flex gap-x-5 px-6 ">
+            <li class=" py-5">Silabo</li>
+            <li class=" py-5"><a href="/codigo.html">codigo</a></li>
+            <li class="border-b-[3px] border-[#0661fc] py-5 ">Registro</li>
+            <li class=" py-5">Informacion</li>
+        
+        </ul>
+        </div>
+        
+            
+             <!-- FORMULARIO -->
+        <form id="registrar" class="bg-white pb-7 mx-auto max-w-3xl overflow-hidden flex flex-col" action="">
+            <div class="bg-[#ffc541] w-full py-3 px-2">
+                <h1 class="text-xl font-bold">Registrar Estudiante</h1>
+            </div>
+        
+            <div class="grid grid-cols-1 md:grid-cols-2 px-3 py-4 gap-6 items-center mb-4">
+                <div>
+                    <label for="dni" class="font-medium">DNI:</label>
+                    <input type="text" class="w-full border-[1px] border-[#b0c0ca] p-2 rounded-md" id="dni" name="dni" placeholder="Ingrese DNI" required>
+                </div>
+        
+                <div>
+                    <label for="nombre" class="font-medium">Nombre:</label>
+                    <input type="text" class="w-full border-[1px] border-[#b0c0ca] p-2 rounded-md" id="nombre" name="nombre" placeholder="Ingrese Nombre" required>
+                </div>
+        
+                <div>
+                    <label for="edad" class="font-medium">Edad:</label>
+                    <input type="number" class="w-full border-[1px] border-[#b0c0ca] p-2 rounded-md" id="edad" name="edad" placeholder="Ingrese Edad" required min="16" max="100">
+                </div>
+        
+                <div>
+                    <label for="carrera" class="font-medium">Carrera:</label>
+                    <select id="carrera" name="carrera" class="w-full border-[1px] border-[#b0c0ca] p-2 rounded-md" required>
+                        <option value="" disabled selected>Seleccione una carrera</option>
+                        <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                        <option value="Ingeniería de Software">Ingeniería de Software</option>
+                        <option value="Ingeniería de Redes">Ingeniería de Redes</option>
+                        <option value="Ingeniería de Hardware">Ingeniería de Hardware</option>
+                    </select>
+                </div>
+        
+                <div>
+                    <label for="año_ingreso" class="font-medium">Año de Ingreso:</label>
+                    <input type="number" class="w-full border-[1px] border-[#b0c0ca] p-2 rounded-md" id="año_ingreso" name="año_ingreso" placeholder="Ingrese Año de Ingreso" required min="2000" max="2024">
+                </div>
+            </div>
+        
+            <button type="submit" class="mx-7 font-semibold py-2 rounded-md border-[1px] border-[#0661fc] text-[#0661fc] hover:bg-[#0660fc2d] transition duration-200">
+                Registrar
+            </button>
+        </form>
+        <!-- code -->
+        
+       
+        <!-- table -->
+        <table id="tablaAlumnos" class="min-w-full border-[1px] border-gray-300 text-center">
+            <thead>
+                <tr class="bg-blue-500 text-white">
+                    <th class="px-4 py-2 border border-gray-300">#</th>
+                    <th class="px-4 py-2 border border-gray-300">DNI</th>
+                    <th class="px-4 py-2 border border-gray-300">Nombre</th>
+                    <th class="px-4 py-2 border border-gray-300">Edad</th>
+                    <th class="px-4 py-2 border border-gray-300">Carrera</th>
+                    <th class="px-4 py-2 border border-gray-300">Año de Ingreso</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white even:bg-gray-100 hover:bg-blue-100">
+                <!-- Aquí se añadirán las filas de los alumnos -->
+            </tbody>
+        </table>
+        
+    </main>
+    
+
+   
+
+</body>
+</html>
+
+<script src="/register.js"></script>
+<style>
+    html {
+		font-family: system-ui, sans-serif;
+		background: #ffffff;
+	}
+	
+</style>
