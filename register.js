@@ -30,7 +30,7 @@ function displayAlumnos() {
     alumnos.forEach(alumno => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td class =" class="px-4 py-2 border border-gray-300 ">${alumno.id}</td>
+            <td  class="px-4 py-2 border border-gray-300 ">${alumno.id}</td>
             <td>${alumno.dni}</td>
             <td>${alumno.nombre}</td>
             <td>${alumno.edad}</td>
